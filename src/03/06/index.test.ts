@@ -20,6 +20,7 @@ describe("真偽値の検証", () => {
     expect(undefined).toBeFalsy();
     expect(null).toBeNull();
     expect(undefined).toBeUndefined();
+    expect(null).not.toBeUndefined();
     expect(undefined).not.toBeDefined();
   });
 });
@@ -40,6 +41,8 @@ describe("数値の検証", () => {
   });
   test("小数計算は正確ではない", () => {
     expect(0.1 + 0.2).not.toBe(0.3);
+    // however
+    expect(0.25 + 0.25).toBe(0.5);
   });
   test("小数計算の指定桁までを比較する", () => {
     expect(0.1 + 0.2).toBeCloseTo(0.3); // デフォルトは 2桁

@@ -9,10 +9,9 @@ describe("四則演算", () => {
       expect(add(70, 80)).toBe(100);
     });
     test("引数が'0〜100'の範囲外だった場合、例外をスローする", () => {
-      const message = "入力値は0〜100の間で入力してください";
-      expect(() => add(-10, 10)).toThrow(message);
-      expect(() => add(10, -10)).toThrow(message);
-      expect(() => add(-10, 110)).toThrow(message);
+      expect(() => add(-10, 10)).toThrow(RangeError);
+      expect(() => add(10, -10)).toThrow(RangeError);
+      expect(() => add(-10, 110)).toThrow(RangeError);
     });
   });
   describe("sub", () => {

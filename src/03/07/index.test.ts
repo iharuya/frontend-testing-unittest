@@ -48,4 +48,5 @@ test("return していないため、Promise が解決する前にテストが�
   expect(wait(2000)).resolves.toBe(3000);
   // 正しくはアサーションを return する
   // return expect(wait(2000)).resolves.toBe(3000);
+  expect.assertions(0);
 });

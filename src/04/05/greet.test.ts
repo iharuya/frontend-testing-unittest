@@ -1,5 +1,6 @@
 import { greet } from "./greet";
 
+// mockFnはいわゆるスパイ
 test("モック関数は実行された", () => {
   const mockFn = jest.fn();
   mockFn();
@@ -34,6 +35,7 @@ test("モック関数は実行時の引数を記録している", () => {
     mockFn(message);
   }
   greet("hello");
+  greet("hello2");
   expect(mockFn).toHaveBeenCalledWith("hello");
 });
 

@@ -1,5 +1,6 @@
 import { greet, sayGoodBye } from "./greet";
 
+// 都合の悪いモジュールの一部を代用品（モック/スタブ）に差し替える
 jest.mock("./greet", () => ({
   ...jest.requireActual("./greet"),
   sayGoodBye: (name: string) => `Good bye, ${name}.`,

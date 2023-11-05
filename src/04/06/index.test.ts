@@ -25,6 +25,7 @@ function mockPostMyArticle(input: ArticleInput, status = 200) {
   }
 }
 
+// pnpmを使って、ここに:ArticleInputをつけるとなぜかテストできなくなる、、、
 function inputFactory(input?: Partial<ArticleInput>) {
   return {
     tags: ["testing"],

@@ -1,6 +1,6 @@
 import { greetByTime } from ".";
 
-describe("greetByTime(", () => {
+describe("greetByTime()", () => {
   beforeEach(() => {
     jest.useFakeTimers();
   });
